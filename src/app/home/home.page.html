@@ -7,14 +7,25 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ <h3>Flashlights and GPS</h3>
+ <ion-button (click)="Flashlight()">Flashlight</ion-button>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ <hr>
+  {{result}}
+ <ul>
+   <li [routerLink]="['/flashlight']" routerDirection="forward">Olight Warrior 3S Rechargeable Flashlight</li>
+   <li [routerLink]="['/flashlight2']" routerDirection="forward">Dorcy Pro Rechargeable Flashlight 41 4299</li>
+   <li [routerLink]="['/flashlight3']" routerDirection="forward">Fenix LD22 V2 LED Flashlight</li>
+   <li [routerLink]="['/flashlight4']" routerDirection="forward">LEDLenser P7 Core Flashlight</li>
+ </ul>
+
+<ion-button [routerLink]="['/gps']" routerDirection=forward>GPS Page</ion-button>
+
+ <hr>
+
+ <h2>GPS</h2>
+ <ion-button (click)="GPS()">GPS</ion-button>
+ {{lat}}, {{long}}
+
+ 
 </ion-content>
